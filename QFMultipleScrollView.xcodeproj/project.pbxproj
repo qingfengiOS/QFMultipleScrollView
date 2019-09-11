@@ -14,6 +14,9 @@
 		81192CB8231A126E00644133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81192CB6231A126E00644133 /* LaunchScreen.storyboard */; };
 		81192CC3231A126E00644133 /* QFMultipleScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CC2231A126E00644133 /* QFMultipleScrollViewTests.swift */; };
 		81192CCE231A126E00644133 /* QFMultipleScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CCD231A126E00644133 /* QFMultipleScrollViewUITests.swift */; };
+		81192CDE231A206A00644133 /* QFSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CDD231A206A00644133 /* QFSecondViewController.swift */; };
+		81192CE0231A207D00644133 /* QFFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CDF231A207D00644133 /* QFFirstViewController.swift */; };
+		81192CE2231A219C00644133 /* QFPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CE1231A219C00644133 /* QFPageTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		81192CC9231A126E00644133 /* QFMultipleScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QFMultipleScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81192CCD231A126E00644133 /* QFMultipleScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFMultipleScrollViewUITests.swift; sourceTree = "<group>"; };
 		81192CCF231A126E00644133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81192CDD231A206A00644133 /* QFSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFSecondViewController.swift; sourceTree = "<group>"; };
+		81192CDF231A207D00644133 /* QFFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFFirstViewController.swift; sourceTree = "<group>"; };
+		81192CE1231A219C00644133 /* QFPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFPageTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				81192CAD231A126C00644133 /* AppDelegate.swift */,
 				81192CAF231A126C00644133 /* ViewController.swift */,
+				81192CE1231A219C00644133 /* QFPageTitleView.swift */,
+				81192CDF231A207D00644133 /* QFFirstViewController.swift */,
+				81192CDD231A206A00644133 /* QFSecondViewController.swift */,
 				81192CB1231A126C00644133 /* Main.storyboard */,
 				81192CB4231A126E00644133 /* Assets.xcassets */,
 				81192CB6231A126E00644133 /* LaunchScreen.storyboard */,
@@ -256,6 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81192CE0231A207D00644133 /* QFFirstViewController.swift in Sources */,
+				81192CDE231A206A00644133 /* QFSecondViewController.swift in Sources */,
+				81192CE2231A219C00644133 /* QFPageTitleView.swift in Sources */,
 				81192CB0231A126C00644133 /* ViewController.swift in Sources */,
 				81192CAE231A126C00644133 /* AppDelegate.swift in Sources */,
 			);
@@ -433,7 +445,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 729BYBTS3K;
 				INFOPLIST_FILE = QFMultipleScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +464,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 729BYBTS3K;
 				INFOPLIST_FILE = QFMultipleScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 struct Screen {
     //当前屏幕尺寸
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
     weak var bottomScrollView: UIScrollView!
     weak var headerView: UIView!
     weak var pageTitleView: QFPageTitleView!
+    weak var containerScrollView: UIScrollView!
 
     weak var firstViewController: QFFirstViewController!
     weak var secondViewController: QFSecondViewController!
@@ -46,17 +48,24 @@ class ViewController: UIViewController {
 
     private func initBootomScrollView() {
         let bottomScrollView = UIScrollView()
-        bottomScrollView.frame = CGRect(x: 0, y: 0, width: Screen.width, height: Screen.height)
         self.bottomScrollView = bottomScrollView
         view.addSubview(bottomScrollView)
-
+        bottomScrollView.snp.makeConstraints { (make) in
+            make.edges.equalTo(0)
+        }
         bottomScrollView.contentSize = CGSize(width: Screen.width, height: Screen.height + headerHeight)
     }
 
     private func initHeaderView() {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: Int(Screen.width), height: Int(headerHeight)))
+        let headerView = UIView()
         headerView.backgroundColor = UIColor.red
         bottomScrollView.addSubview(headerView)
+        headerView.snp.makeConstraints { (make) in
+            make.leading.equalTo(0)
+            make.top.equalTo(-Screen.statusBarHeight)
+            make.width.equalTo(Screen.width)
+            make.height.equalTo(headerHeight)
+        }
     }
 
     private func initPageTitleView() {
@@ -64,32 +73,54 @@ class ViewController: UIViewController {
         let pageTitleView = QFPageTitleView(titles)
         self.pageTitleView = pageTitleView
         bottomScrollView.addSubview(pageTitleView)
-        pageTitleView.frame = CGRect(x: 0, y: Int(headerHeight), width: Int(Screen.width), height: Int(titleHeight))
-        pageTitleView.backgroundColor = UIColor.gray
+        pageTitleView.snp.makeConstraints { (make) in
+            make.leading.equalTo(0)
+            make.width.equalTo(Screen.width)
+            make.top.equalTo(headerHeight - Screen.statusBarHeight)
+            make.height.equalTo(40)
+        }
+        pageTitleView.backgroundColor = UIColor.orange
+        pageTitleView.clickBlock = { [weak self] (index) in
+            self?.containerScrollView.contentOffset = CGPoint(x: CGFloat(index) * Screen.width, y: 0.0)
+            
+        }
     }
 
     private func initSubControllers() {
         let containerScrollView = UIScrollView()
+        self.containerScrollView = containerScrollView
         bottomScrollView.addSubview(containerScrollView)
-        let height = Screen.height - headerHeight - titleHeight
-        containerScrollView.frame = CGRect(x: 0, y: headerHeight + titleHeight, width: Screen.width, height: height)
-        containerScrollView.contentSize = CGSize(width: Screen.width, height: height)
+        let height = Screen.height - titleHeight
+        containerScrollView.contentSize = CGSize(width: Screen.width * 2, height: height)
+        containerScrollView.snp.makeConstraints { (make) in
+            make.leading.equalTo(0)
+            make.top.equalTo(pageTitleView.snp.bottom)
+            make.width.equalTo(Screen.width)
+            make.height.equalTo(height)
+        }
+        containerScrollView.backgroundColor = UIColor.orange
 
         let first = QFFirstViewController()
         self.firstViewController = first
         self.addChild(first)
-        first.view.bounds.size = containerScrollView.bounds.size
-        first.view.bounds.origin = CGPoint(x: 0, y: 0)
         containerScrollView.addSubview(first.view)
+        first.view.snp.makeConstraints { (make) in
+            make.leading.top.bottom.equalTo(0)
+            make.height.equalTo(Screen.height - titleHeight)
+            make.width.equalTo(Screen.width)
+        }
 
         let second = QFSecondViewController()
         self.secondViewController = second
         self.addChild(second)
-        second.view.bounds.size = containerScrollView.bounds.size
-        second.view.bounds.origin = CGPoint(x: Screen.width, y: 0)
         containerScrollView.addSubview(second.view)
+        second.view.snp.makeConstraints { (make) in
+            make.leading.equalTo(Screen.width)
+            make.top.bottom.equalTo(0)
+            make.width.equalTo(Screen.width)
+            make.height.equalTo(Screen.height - titleHeight)
+        }
     }
 
 
 }
-

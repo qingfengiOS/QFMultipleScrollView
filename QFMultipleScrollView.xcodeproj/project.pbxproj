@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CB9EEB945B847F1DD622057 /* Pods_QFMultipleScrollViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067CF9860FB7153C1588965B /* Pods_QFMultipleScrollViewUITests.framework */; };
+		4CF93E9F5BEBE36D867F1933 /* Pods_QFMultipleScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305A61113FE02F41E833F764 /* Pods_QFMultipleScrollView.framework */; };
 		81192CAE231A126C00644133 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CAD231A126C00644133 /* AppDelegate.swift */; };
 		81192CB0231A126C00644133 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CAF231A126C00644133 /* ViewController.swift */; };
 		81192CB3231A126C00644133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81192CB1231A126C00644133 /* Main.storyboard */; };
@@ -17,6 +19,7 @@
 		81192CDE231A206A00644133 /* QFSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CDD231A206A00644133 /* QFSecondViewController.swift */; };
 		81192CE0231A207D00644133 /* QFFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CDF231A207D00644133 /* QFFirstViewController.swift */; };
 		81192CE2231A219C00644133 /* QFPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81192CE1231A219C00644133 /* QFPageTitleView.swift */; };
+		96B762FAB884B8F18BEF8084 /* Pods_QFMultipleScrollViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE59DF5B975BC2F8D4D195B5 /* Pods_QFMultipleScrollViewTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		067CF9860FB7153C1588965B /* Pods_QFMultipleScrollViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QFMultipleScrollViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		305A61113FE02F41E833F764 /* Pods_QFMultipleScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QFMultipleScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		396DAB0473CA791437176C4B /* Pods-QFMultipleScrollViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFMultipleScrollViewUITests.release.xcconfig"; path = "Target Support Files/Pods-QFMultipleScrollViewUITests/Pods-QFMultipleScrollViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5EC088D475EAB64D34214009 /* Pods-QFMultipleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFMultipleScrollView.debug.xcconfig"; path = "Target Support Files/Pods-QFMultipleScrollView/Pods-QFMultipleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		63D2E3C8A70DFEAA8E0F6E0D /* Pods-QFMultipleScrollViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFMultipleScrollViewTests.release.xcconfig"; path = "Target Support Files/Pods-QFMultipleScrollViewTests/Pods-QFMultipleScrollViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		808D478BC272A1F8F0BC613C /* Pods-QFMultipleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFMultipleScrollView.release.xcconfig"; path = "Target Support Files/Pods-QFMultipleScrollView/Pods-QFMultipleScrollView.release.xcconfig"; sourceTree = "<group>"; };
 		81192CAA231A126C00644133 /* QFMultipleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QFMultipleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81192CAD231A126C00644133 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81192CAF231A126C00644133 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +62,9 @@
 		81192CDD231A206A00644133 /* QFSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFSecondViewController.swift; sourceTree = "<group>"; };
 		81192CDF231A207D00644133 /* QFFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFFirstViewController.swift; sourceTree = "<group>"; };
 		81192CE1231A219C00644133 /* QFPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFPageTitleView.swift; sourceTree = "<group>"; };
+		B9C5CA415B9A77ECA0E4B6D6 /* Pods-QFMultipleScrollViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFMultipleScrollViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-QFMultipleScrollViewUITests/Pods-QFMultipleScrollViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ECDFD878BB7DB22268897500 /* Pods-QFMultipleScrollViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFMultipleScrollViewTests.debug.xcconfig"; path = "Target Support Files/Pods-QFMultipleScrollViewTests/Pods-QFMultipleScrollViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE59DF5B975BC2F8D4D195B5 /* Pods_QFMultipleScrollViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QFMultipleScrollViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF93E9F5BEBE36D867F1933 /* Pods_QFMultipleScrollView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B762FAB884B8F18BEF8084 /* Pods_QFMultipleScrollViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB9EEB945B847F1DD622057 /* Pods_QFMultipleScrollViewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64BF9415285FE52774719AB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				305A61113FE02F41E833F764 /* Pods_QFMultipleScrollView.framework */,
+				FE59DF5B975BC2F8D4D195B5 /* Pods_QFMultipleScrollViewTests.framework */,
+				067CF9860FB7153C1588965B /* Pods_QFMultipleScrollViewUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81192CA1231A126C00644133 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +112,8 @@
 				81192CC1231A126E00644133 /* QFMultipleScrollViewTests */,
 				81192CCC231A126E00644133 /* QFMultipleScrollViewUITests */,
 				81192CAB231A126C00644133 /* Products */,
+				96C00847D999C791F90E3266 /* Pods */,
+				64BF9415285FE52774719AB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +161,20 @@
 			path = QFMultipleScrollViewUITests;
 			sourceTree = "<group>";
 		};
+		96C00847D999C791F90E3266 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EC088D475EAB64D34214009 /* Pods-QFMultipleScrollView.debug.xcconfig */,
+				808D478BC272A1F8F0BC613C /* Pods-QFMultipleScrollView.release.xcconfig */,
+				ECDFD878BB7DB22268897500 /* Pods-QFMultipleScrollViewTests.debug.xcconfig */,
+				63D2E3C8A70DFEAA8E0F6E0D /* Pods-QFMultipleScrollViewTests.release.xcconfig */,
+				B9C5CA415B9A77ECA0E4B6D6 /* Pods-QFMultipleScrollViewUITests.debug.xcconfig */,
+				396DAB0473CA791437176C4B /* Pods-QFMultipleScrollViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81192CD2231A126E00644133 /* Build configuration list for PBXNativeTarget "QFMultipleScrollView" */;
 			buildPhases = (
+				20BCC76DFA95F37E7F6D65AC /* [CP] Check Pods Manifest.lock */,
 				81192CA6231A126C00644133 /* Sources */,
 				81192CA7231A126C00644133 /* Frameworks */,
 				81192CA8231A126C00644133 /* Resources */,
+				AF566A21C177CA30E7245F85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81192CD5231A126E00644133 /* Build configuration list for PBXNativeTarget "QFMultipleScrollViewTests" */;
 			buildPhases = (
+				F396D2782226FCA213E2B8FC /* [CP] Check Pods Manifest.lock */,
 				81192CBA231A126E00644133 /* Sources */,
 				81192CBB231A126E00644133 /* Frameworks */,
 				81192CBC231A126E00644133 /* Resources */,
@@ -176,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81192CD8231A126E00644133 /* Build configuration list for PBXNativeTarget "QFMultipleScrollViewUITests" */;
 			buildPhases = (
+				6B69AB936425B0181AD58874 /* [CP] Check Pods Manifest.lock */,
 				81192CC5231A126E00644133 /* Sources */,
 				81192CC6231A126E00644133 /* Frameworks */,
 				81192CC7231A126E00644133 /* Resources */,
@@ -259,6 +304,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20BCC76DFA95F37E7F6D65AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QFMultipleScrollView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B69AB936425B0181AD58874 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QFMultipleScrollViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF566A21C177CA30E7245F85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QFMultipleScrollView/Pods-QFMultipleScrollView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QFMultipleScrollView/Pods-QFMultipleScrollView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QFMultipleScrollView/Pods-QFMultipleScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F396D2782226FCA213E2B8FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QFMultipleScrollViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81192CA6231A126C00644133 /* Sources */ = {
@@ -442,6 +573,7 @@
 		};
 		81192CD3231A126E00644133 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC088D475EAB64D34214009 /* Pods-QFMultipleScrollView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,6 +593,7 @@
 		};
 		81192CD4231A126E00644133 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 808D478BC272A1F8F0BC613C /* Pods-QFMultipleScrollView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +613,7 @@
 		};
 		81192CD6231A126E00644133 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECDFD878BB7DB22268897500 /* Pods-QFMultipleScrollViewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -500,6 +634,7 @@
 		};
 		81192CD7231A126E00644133 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63D2E3C8A70DFEAA8E0F6E0D /* Pods-QFMultipleScrollViewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +655,7 @@
 		};
 		81192CD9231A126E00644133 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C5CA415B9A77ECA0E4B6D6 /* Pods-QFMultipleScrollViewUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +675,7 @@
 		};
 		81192CDA231A126E00644133 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 396DAB0473CA791437176C4B /* Pods-QFMultipleScrollViewUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -11,9 +11,11 @@ import UIKit
 class QFPageTitleView: UIView {
 
     let height: CGFloat = 40.0
+    var clickBlock: ((Int) -> Void)?
 
     // MARK: - Properties
     var titles: [String] = [String]()
+    var titleViews: [QFTitleItemView] = []
 
     // MARK: - Life Cycle
     init(_ titles: [String]) {
@@ -40,12 +42,28 @@ class QFPageTitleView: UIView {
                                      width: titleWidth,
                                      height: height)
             self.addSubview(titleView)
+            titleViews.append(titleView)
             titleView.titleString = titleString
             titleView.titleWidth = titleWidth
+            titleView.titleButton.addTarget(self, action: #selector(_handleClick), for: .touchUpInside)
+            titleView.titleButton.tag = 10000 + index
+        }
+    }
+
+    @objc private func _handleClick(btn: UIButton) {
+        clickBlock?(btn.tag - 10000)
+    }
+
+    func setSelectedIndex(_ selectedIndex: Int) {
+        for (index, titleView) in titleViews.enumerated() {
+            if index == selectedIndex {
+                titleView.indicateLabel.backgroundColor = UIColor.blue
+            } else {
+                titleView.indicateLabel.backgroundColor = UIColor.white
+            }
         }
     }
 }
-
 
 class QFTitleItemView: UIView {
 
@@ -83,12 +101,11 @@ class QFTitleItemView: UIView {
         self.titleButton = titleBtn
         self.addSubview(titleBtn)
         titleBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        titleBtn.titleLabel?.textColor = UIColor.blue
+        titleBtn.setTitleColor(UIColor.green, for: .normal)
 
         let indicateLine = UILabel()
         self.indicateLabel = indicateLine
         self.addSubview(indicateLine)
-        indicateLine.backgroundColor = UIColor.blue
     }
 
     private func setTitle(_ titleString: String) {

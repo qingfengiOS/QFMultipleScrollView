@@ -18,10 +18,10 @@ struct Screen {
     static let size = UIScreen.main.bounds.size
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
 
     // MARK: - Properties
-    weak var bottomScrollView: UIScrollView!
+    weak var bottomScrollView: QFMultiResponseScrollView!
     weak var headerView: UIView!
     weak var pageTitleView: QFPageTitleView!
     weak var containerScrollView: UIScrollView!
@@ -31,6 +31,12 @@ class ViewController: UIViewController {
 
     let headerHeight: CGFloat = 150.0
     let titleHeight: CGFloat = 40
+    let maxOffset: CGFloat = 115 - Screen.statusBarHeight //最大偏移量
+
+    var superCanScroll = true
+
+    private weak var currentVC: QFFirstViewController!
+
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -46,9 +52,11 @@ class ViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
+    // MARK: - Initialize Appreaence
     private func initBootomScrollView() {
-        let bottomScrollView = UIScrollView()
+        let bottomScrollView = QFMultiResponseScrollView()
         self.bottomScrollView = bottomScrollView
+        bottomScrollView.delegate = self
         view.addSubview(bottomScrollView)
         bottomScrollView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
@@ -58,6 +66,7 @@ class ViewController: UIViewController {
 
     private func initHeaderView() {
         let headerView = UIView()
+        self.headerView = headerView
         headerView.backgroundColor = UIColor.red
         bottomScrollView.addSubview(headerView)
         headerView.snp.makeConstraints { (make) in
@@ -120,7 +129,32 @@ class ViewController: UIViewController {
             make.width.equalTo(Screen.width)
             make.height.equalTo(Screen.height - titleHeight)
         }
+        currentVC = firstViewController
+
+        first.superCanScrollBlock = { [weak self] (canScroll) in
+            self?.superCanScroll = canScroll
+        }
+        second.superCanScrollBlock = { [weak self] (canScroll) in
+            self?.superCanScroll = canScroll
+        }
+
     }
 
+    // MARK: - UIScrollViewDelegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        headerView.isHidden = scrollView.contentOffset.y >= maxOffset ? true : false
+        if !superCanScroll {
+            scrollView.contentOffset.y = maxOffset
+            currentVC.childCanScroll = true
+        } else {
+            print(scrollView.contentOffset.y)
+            if scrollView.contentOffset.y >= maxOffset {
+                scrollView.contentOffset.y = maxOffset
+                superCanScroll = false
+                currentVC.childCanScroll = true
+            } else {
 
+            }
+        }
+    }
 }

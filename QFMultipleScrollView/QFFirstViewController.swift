@@ -13,6 +13,9 @@ class QFFirstViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - Properties
     weak var tableView: UITableView!
 
+    var childCanScroll = false
+    var superCanScrollBlock: ((Bool) -> Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         _initUI()
@@ -47,4 +50,17 @@ class QFFirstViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.text = "First:\(indexPath.row)"
         return cell
     }
+
+    // MARK: - ScrollViewDelegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if !childCanScroll {
+            scrollView.contentOffset.y = 0
+        } else {
+            if scrollView.contentOffset.y <= 0 {
+                childCanScroll = false
+                superCanScrollBlock?(true)
+            }
+        }
+    }
+
 }

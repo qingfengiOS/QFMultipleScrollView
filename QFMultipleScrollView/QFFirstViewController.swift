@@ -16,6 +16,7 @@ class QFFirstViewController: UIViewController, UITableViewDelegate, UITableViewD
     var childCanScroll = false
     var superCanScrollBlock: ((Bool) -> Void)?
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         _initUI()
@@ -39,8 +40,9 @@ class QFFirstViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
     }
 
+    // MARK: - TableView Delegate/DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 40
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,6 +50,7 @@ class QFFirstViewController: UIViewController, UITableViewDelegate, UITableViewD
             return UITableViewCell()
         }
         cell.textLabel?.text = "First:\(indexPath.row)"
+        cell.selectionStyle = .none
         return cell
     }
 

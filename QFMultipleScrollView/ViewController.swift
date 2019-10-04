@@ -67,7 +67,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     private func initHeaderView() {
         let headerView = UIView()
         self.headerView = headerView
-        headerView.backgroundColor = UIColor.red
+        headerView.backgroundColor = UIColor.orange
         bottomScrollView.addSubview(headerView)
         headerView.snp.makeConstraints { (make) in
             make.leading.equalTo(0)
@@ -78,7 +78,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
 
     private func initPageTitleView() {
-        let titles = ["First", "Second"]
+        let titles = ["First Page", "Second Page"]
         let pageTitleView = QFPageTitleView(titles)
         self.pageTitleView = pageTitleView
         bottomScrollView.addSubview(pageTitleView)
@@ -88,26 +88,26 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.top.equalTo(headerHeight - Screen.statusBarHeight)
             make.height.equalTo(40)
         }
-        pageTitleView.backgroundColor = UIColor.orange
         pageTitleView.clickBlock = { [weak self] (index) in
             self?.containerScrollView.contentOffset = CGPoint(x: CGFloat(index) * Screen.width, y: 0.0)
-            
+            self?.currentVC = index == 0 ? self?.firstViewController : self?.secondViewController
         }
     }
 
     private func initSubControllers() {
         let containerScrollView = UIScrollView()
         self.containerScrollView = containerScrollView
+        containerScrollView.isScrollEnabled = false
         bottomScrollView.addSubview(containerScrollView)
-        let height = Screen.height - titleHeight
+        let height = Screen.height - titleHeight - Screen.statusBarHeight
         containerScrollView.contentSize = CGSize(width: Screen.width * 2, height: height)
         containerScrollView.snp.makeConstraints { (make) in
-            make.leading.equalTo(0)
+            make.leading.bottom.equalTo(0)
             make.top.equalTo(pageTitleView.snp.bottom)
             make.width.equalTo(Screen.width)
             make.height.equalTo(height)
+
         }
-        containerScrollView.backgroundColor = UIColor.orange
 
         let first = QFFirstViewController()
         self.firstViewController = first
@@ -115,7 +115,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         containerScrollView.addSubview(first.view)
         first.view.snp.makeConstraints { (make) in
             make.leading.top.bottom.equalTo(0)
-            make.height.equalTo(Screen.height - titleHeight)
+            make.height.equalTo(Screen.height - titleHeight - Screen.statusBarHeight)
             make.width.equalTo(Screen.width)
         }
 
@@ -127,7 +127,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.leading.equalTo(Screen.width)
             make.top.bottom.equalTo(0)
             make.width.equalTo(Screen.width)
-            make.height.equalTo(Screen.height - titleHeight)
+            make.height.equalTo(Screen.height - titleHeight - Screen.statusBarHeight)
         }
         currentVC = firstViewController
 
@@ -137,7 +137,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         second.superCanScrollBlock = { [weak self] (canScroll) in
             self?.superCanScroll = canScroll
         }
-
     }
 
     // MARK: - UIScrollViewDelegate
@@ -147,13 +146,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             scrollView.contentOffset.y = maxOffset
             currentVC.childCanScroll = true
         } else {
-            print(scrollView.contentOffset.y)
             if scrollView.contentOffset.y >= maxOffset {
                 scrollView.contentOffset.y = maxOffset
                 superCanScroll = false
                 currentVC.childCanScroll = true
-            } else {
-
             }
         }
     }

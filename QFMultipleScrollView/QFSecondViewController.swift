@@ -10,12 +10,15 @@ import UIKit
 
 class QFSecondViewController: QFFirstViewController {
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "secondCell")
     }
 
+    // MARK: - TableView Delegate/DataSource
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell") else {
             return UITableViewCell()
         }
         cell.textLabel?.text = "Second:\(indexPath.row)"

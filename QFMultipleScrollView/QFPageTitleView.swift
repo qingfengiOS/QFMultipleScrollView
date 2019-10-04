@@ -48,10 +48,12 @@ class QFPageTitleView: UIView {
             titleView.titleButton.addTarget(self, action: #selector(_handleClick), for: .touchUpInside)
             titleView.titleButton.tag = 10000 + index
         }
+        setSelectedIndex(0)
     }
 
     @objc private func _handleClick(btn: UIButton) {
         clickBlock?(btn.tag - 10000)
+        setSelectedIndex(btn.tag - 10000)
     }
 
     func setSelectedIndex(_ selectedIndex: Int) {
@@ -96,7 +98,7 @@ class QFTitleItemView: UIView {
 
     // MARK: - Initialize Appreaence
     private func _initUI() {
-
+        
         let titleBtn = UIButton()
         self.titleButton = titleBtn
         self.addSubview(titleBtn)

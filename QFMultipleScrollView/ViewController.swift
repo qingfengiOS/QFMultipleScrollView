@@ -91,6 +91,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         pageTitleView.clickBlock = { [weak self] (index) in
             self?.containerScrollView.contentOffset = CGPoint(x: CGFloat(index) * Screen.width, y: 0.0)
             self?.currentVC = index == 0 ? self?.firstViewController : self?.secondViewController
+//            self?.currentVC.tableView.contentOffset.y = 0
         }
     }
 
@@ -106,7 +107,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.top.equalTo(pageTitleView.snp.bottom)
             make.width.equalTo(Screen.width)
             make.height.equalTo(height)
-
         }
 
         let first = QFFirstViewController()
